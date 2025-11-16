@@ -4,8 +4,6 @@ import {
 	CREATED_SUFFIX,
 	DEFAULT_HEADER_WIDTH,
 	FILE_SUFFIX,
-	MAX_HEADER_WIDTH,
-	MIN_HEADER_WIDTH,
 	MIN_INNER_WIDTH,
 	SPACER_SUFFIX,
 	TITLE_SUFFIX,
@@ -30,7 +28,7 @@ export function buildHeaderLines(
 	updatedAt: string,
 	delimiters: CommentDelimiters,
 ): string[] {
-	const innerWidth = computeInnerWidth(settings.headerWidth, delimiters);
+	const innerWidth = computeInnerWidth(DEFAULT_HEADER_WIDTH, delimiters);
 	const identity = `${settings.username} <${settings.email}>`;
 
 	return [
@@ -46,14 +44,6 @@ export function buildHeaderLines(
 		formatEmpty(innerWidth, delimiters),
 		formatBorder(innerWidth, delimiters),
 	];
-}
-
-export function sanitizeWidth(value: number): number {
-	if (!Number.isFinite(value)) {
-		return DEFAULT_HEADER_WIDTH;
-	}
-	const rounded = Math.floor(value);
-	return Math.min(MAX_HEADER_WIDTH, Math.max(MIN_HEADER_WIDTH, rounded));
 }
 
 export function computeInnerWidth(totalWidth: number, delimiters: CommentDelimiters): number {

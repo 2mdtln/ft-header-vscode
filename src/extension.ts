@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const notifier = new StatusNotifier();
 	const autoInsertController = new AutoInsertController(context, notifier);
 
-	const insertCommand = vscode.commands.registerCommand('42-header.insertHeader', async () => {
+	const insertCommand = vscode.commands.registerCommand('ft_header.insertHeader', async () => {
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
 			vscode.window.showErrorMessage('Open a file before inserting a 42 header.');
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 		})());
 	});
 
-	const toggleAutoInsert = vscode.commands.registerCommand('42-header.toggleAutoInsert', () => autoInsertController.toggle());
+	const toggleAutoInsert = vscode.commands.registerCommand('ft_header.toggleAutoInsert', () => autoInsertController.toggle());
 
 	const fileCreateSubscription = vscode.workspace.onDidCreateFiles(async event => {
 		const settings = readSettings();

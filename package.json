@@ -1,8 +1,8 @@
 {
   "name": "ft-header",
   "displayName": "ft_header",
-  "description": "Generate 42-style file headers using your name, email, with customizable header width for long names. Great for Piscine and Core projects.",
-  "version": "1.2.5",
+  "description": "Generate 42 file headers using your name, email for Piscine and Core projects.",
+  "version": "1.2.6",
   "icon": "42.png",
   "publisher": "2mdtln",
   "repository": {
@@ -33,17 +33,17 @@
   "contributes": {
     "commands": [
       {
-        "command": "42-header.insertHeader",
+        "command": "ft_header.insertHeader",
         "title": "Insert 42 Header"
       },
       {
-        "command": "42-header.toggleAutoInsert",
+        "command": "ft_header.toggleAutoInsert",
         "title": "Toggle 42 Auto Header"
       }
     ],
     "keybindings": [
       {
-        "command": "42-header.insertHeader",
+        "command": "ft_header.insertHeader",
         "key": "ctrl+alt+h",
         "mac": "cmd+alt+h",
         "win": "ctrl+alt+h",
@@ -51,24 +51,17 @@
       }
     ],
     "configuration": {
-      "title": "42 Header",
+      "title": "ft_header",
       "properties": {
-        "42-header.username": {
+        "ft_header.username": {
           "type": "string",
           "description": "Student username printed throughout the 42 header.",
           "default": ""
         },
-        "42-header.email": {
+        "ft_header.email": {
           "type": "string",
           "description": "Student email address for the header.",
           "default": ""
-        },
-        "42-header.headerWidth": {
-          "type": "number",
-          "description": "Total width of the generated header (including /* */).",
-          "default": 80,
-          "minimum": 70,
-          "maximum": 160
         }
       }
     }

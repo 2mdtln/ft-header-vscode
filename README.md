@@ -1,4 +1,4 @@
-# 42 Header
+# ft_header
 
 Drop a 42 header into any file with one shortcut. The extension keeps the classic layout, remembers the original “Created” timestamp, and updates the “Updated” line every time you save.
 
@@ -6,12 +6,12 @@ Drop a 42 header into any file with one shortcut. The extension keeps the classi
 # ****************************************************************************** #
 #                                                                                #
 #                                                           :::      ::::::::    #
-#   42-header                                             :+:      :+:    :+:    #
+#   ft_header                                             :+:      :+:    :+:    #
 #                                                       +:+ +:+         +:+      #
 #   By: mtaheri <mtaheri@student.42istanbul.com.tr>   +#+  +:+       +#+         #
 #                                                   +#+#+#+#+#+   +#+            #
 #   Created: 2025/11/15 20:39:25 by mtaheri              #+#    #+#              #
-#   Updated: 2025/11/16 08:50:42 by mtaheri             ###   ########.fr        #
+#   Updated: 2025/11/16 10:19:53 by mtaheri             ###   ########.fr        #
 #                                                                                #
 # ****************************************************************************** #
 ```
@@ -31,21 +31,19 @@ Drop a 42 header into any file with one shortcut. The extension keeps the classi
 
 ## How to Configure
 
-Open **Settings → Extensions → 42 Header** (or search for `42 Header` in the Settings UI) and adjust:
+Open **Settings → Extensions → ft_header** (or search for `ft_header` in the Settings UI) and adjust:
 
 | Setting | Description |
 | --- | --- |
-| `42-header.username` | Your 42 login (used for By, Created, Updated lines). |
-| `42-header.email` | Your 42 student email. |
-| `42-header.headerWidth` | Total width of the header block (default: 80). Increase for longer names. |
+| `ft_header.username` | Your 42 login (used for By, Created, Updated lines). |
+| `ft_header.email` | Your 42 student email. |
 
 Prefer configuring via `settings.json`? Add:
 
 ```json
 {
-  "42-header.username": "your_login",
-  "42-header.email": "your_login@student.42.fr",
-  "42-header.headerWidth": 80
+  "ft_header.username": "your_login",
+  "ft_header.email": "your_login@student.42.fr"
 }
 ```
 

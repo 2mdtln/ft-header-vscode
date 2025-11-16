@@ -8,7 +8,6 @@ export type CommentDelimiters = Readonly<{
 export type HeaderSettings = {
 	username: string;
 	email: string;
-	headerWidth: number;
 };
 
 export type ExistingHeader = {
